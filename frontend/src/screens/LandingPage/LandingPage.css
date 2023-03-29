@@ -1,0 +1,42 @@
+.main {
+  min-height: 93vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../../note-taking.png");
+  background-position: center;
+  background-size: 75%;
+}
+
+.title {
+  font-size: 36px;
+  padding-bottom: 60px;
+  color: rgb(86, 32, 136);
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-bottom: 55px;
+  color: rgb(48, 122, 98);
+}
+
+.intro-text {
+  width: 100%;
+  text-align: center;
+}
+
+.buttonContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.landingbutton1 {
+  width: 100px;
+  height: 55px;
+  margin-right: 50px;
+}
+
+.landingbutton2 {
+  width: 100px;
+  height: 55px;
+}
