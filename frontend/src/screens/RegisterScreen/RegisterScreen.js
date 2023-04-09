@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import MainScreen from "../../components/MainScreen";
 import { MDBFile } from "mdb-react-ui-kit";
 import ErrorMessage from "../../components/ErrorMessage";
-import axios from "axios";
 import Loading from "../../components/Loading";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
