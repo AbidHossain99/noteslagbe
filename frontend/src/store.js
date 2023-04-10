@@ -12,7 +12,6 @@ import {
   noteListReducer,
   noteUpdateReducer,
 } from "./reducers/notesReducers";
-import { hwReducers } from "./reducers/hwReducers";
 
 const reducer = combineReducers({
   userLogin: userLoginReducer,
@@ -22,7 +21,6 @@ const reducer = combineReducers({
   noteUpdate: noteUpdateReducer,
   noteDelete: noteDeleteReducer,
   userUpdate: userUpdateReducer,
-  homeworkAlert: hwReducers,
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo")

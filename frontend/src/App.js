@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import LandingPage from "./screens/LandingPage/LandingPage";
@@ -9,8 +8,8 @@ import RegisterScreen from "./screens/RegisterScreen/RegisterScreen";
 import CreateNote from "./screens/CreateNote/CreateNote";
 import SingleNote from "./screens/SingleNote/SingleNote";
 import ProfileScreen from "./screens/ProfileScreen/ProfileScreen";
-import Homework_alert from "./components/Homework/homework_alert";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
+import Todo from "./screens/Todo/Todo";
 
 const App = () => {
   return (
@@ -25,7 +24,8 @@ const App = () => {
         <Route path="/createnote" Component={CreateNote} />
         <Route path="/note/:id" Component={SingleNote} />
         <Route path="/mynotes" Component={() => <MyNotes />} />
-        <Route path="/homeworkalert" Component={Homework_alert} />
+        <Route path="/todos" Component={Todo} />
+        {/*<Route path="/homeworkalert" Component={Homework_alert} /> */}
       </Routes>
 
       <Footer />

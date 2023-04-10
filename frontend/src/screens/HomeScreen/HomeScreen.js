@@ -11,7 +11,7 @@ const HomeScreen = () => {
             Notes Collection
           </Button>
         </a>
-        <a href="/homeworkalert">
+        <a href="/todos">
           <Button variant="dark" size="lg">
             Homework Alert
           </Button>
