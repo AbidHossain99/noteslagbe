@@ -45,6 +45,49 @@ app.put("/todo/complete/:id", async (req, res) => {
 });
 //////////////////////////////////////////////////////////////
 
+//FOR COURSES API
+const courses = require("./models/CoursesModel");
+
+app.get("/courses", async (req, res) => {
+  const Course = await courses.find();
+  res.json(Course);
+});
+
+app.post("/course/new", (req, res) => {
+  const course = new courses({
+    title: req.body.title,
+    description: req.body.description,
+    picture: req.body.picture,
+    enrollmentStatus: req.body.enrollmentStatus,
+    content: req.body.content,
+  });
+  course.save();
+  res.json(course);
+});
+
+app.put("/course/enrolledCourses/:id", async (req, res) => {
+  const course = await courses.findById(req.params.id);
+  res.json(course);
+});
+
+/*app.put("/course/enrolledCourses/:id", async (req, res) => {
+  try {
+    console.log("Course ID:", req.params.id);
+    const course = await courses.findById(req.params.id);
+
+    if (!course) {
+      console.log(`Course with id ${req.params.id} not found`);
+      return res.status(404).json({ message: "Course not found" });
+    }
+    await course.save();
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
+  }
+}); 
+*/
+//////////////////////////////////////////////////////////////
+
 //FOR USERS API
 app.use("/api/users", userRoutes);
 //////////////////////////////////////////////////////////////

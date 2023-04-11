@@ -10,6 +10,8 @@ import SingleNote from "./screens/SingleNote/SingleNote";
 import ProfileScreen from "./screens/ProfileScreen/ProfileScreen";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import Todo from "./screens/Todo/Todo";
+import Courses from "./screens/Courses/Courses";
+import EnrolledCourses from "./screens/Courses/enrolledCourses";
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
         <Route path="/note/:id" Component={SingleNote} />
         <Route path="/mynotes" Component={() => <MyNotes />} />
         <Route path="/todos" Component={Todo} />
+        <Route path="/courses" Component={Courses} />
+        <Route path="/course/enrolledCourses/:id" Component={EnrolledCourses} />
         {/*<Route path="/homeworkalert" Component={Homework_alert} /> */}
       </Routes>
 

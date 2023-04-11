@@ -16,9 +16,11 @@ const HomeScreen = () => {
             Homework Alert
           </Button>
         </a>
-        <Button variant="dark" size="lg">
-          Get free Courses with Certificates
-        </Button>
+        <a href="/courses">
+          <Button variant="dark" size="lg">
+            Get free Courses with Certificates
+          </Button>
+        </a>
         <a href="/profile">
           <Button variant="dark" size="lg">
             Your Profile
