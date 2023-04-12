@@ -4,7 +4,6 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const noteRoutes = require("./routes/noteRoutes");
-
 const { notFound, errorHandler } = require("./Middleware/errorMiddleware");
 
 const app = express();
@@ -87,6 +86,28 @@ app.put("/course/enrolledCourses/:id", async (req, res) => {
 }); 
 */
 //////////////////////////////////////////////////////////////
+
+//For images API
+
+const resourses = require("./models/resoursesModel");
+
+app.get("/uploadnotes", async (req, res) => {
+  const Resourse = await resourses.find();
+  res.json(Resourse);
+});
+
+app.post("/note/new", (req, res) => {
+  const resourse = new resourses({
+    url: req.body.url,
+  });
+  resourse.save();
+  res.json(resourse);
+});
+
+app.put("/note/uploadnotes/:id", async (req, res) => {
+  const resourse = await resourses.findById(req.params.id);
+  res.json(resourse);
+});
 
 //FOR USERS API
 app.use("/api/users", userRoutes);

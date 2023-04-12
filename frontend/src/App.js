@@ -12,6 +12,9 @@ import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import Todo from "./screens/Todo/Todo";
 import Courses from "./screens/Courses/Courses";
 import EnrolledCourses from "./screens/Courses/enrolledCourses";
+import UploadNotes from "./screens/UploadNotes/UploadNotes";
+import ViewNotes from "./screens/UploadNotes/ViewNotes";
+//import messages from "./screens/messages/messages";
 
 const App = () => {
   return (
@@ -29,6 +32,9 @@ const App = () => {
         <Route path="/todos" Component={Todo} />
         <Route path="/courses" Component={Courses} />
         <Route path="/course/enrolledCourses/:id" Component={EnrolledCourses} />
+        <Route path="/uploadnotes" Component={UploadNotes} />
+        <Route path="/uploadnotes/ViewNotes" Component={ViewNotes} />
+        {/*<Route path="/messages" Component={messages} /> */}
         {/*<Route path="/homeworkalert" Component={Homework_alert} /> */}
       </Routes>
 

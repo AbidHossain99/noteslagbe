@@ -8,12 +8,17 @@ const HomeScreen = () => {
       <div className="d-grid gap-2">
         <a href="/mynotes">
           <Button variant="dark" size="lg">
-            Notes Collection
+            Your Notepad
           </Button>
         </a>
         <a href="/todos">
           <Button variant="dark" size="lg">
             Homework Alert
+          </Button>
+        </a>
+        <a href="/uploadnotes">
+          <Button variant="dark" size="lg">
+            Notes Collection
           </Button>
         </a>
         <a href="/courses">

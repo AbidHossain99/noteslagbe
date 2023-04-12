@@ -20,3 +20,20 @@ GET http://localhost:5000/courses/
 ###
 
 PUT http://localhost:5000/course/enrolledCourses/6434b5cec1ec602bfcc4c68f
+
+###
+
+GET http://localhost:5000/uploadnotes/
+
+###
+
+POST http://localhost:5000/note/new
+Content-Type: application/json
+
+{
+    "url": "https://res.cloudinary.com/djcwxrm60/image/upload/v1681191954/g8wikmwkyz4nouhzebij.jpg"
+}
+
+###
+
+PUT http://localhost:5000/note/uploadnotes/https://res.cloudinary.com/djcwxrm60/image/upload/v1681191954/g8wikmwkyz4nouhzebij.jpg
